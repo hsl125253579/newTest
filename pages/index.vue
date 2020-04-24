@@ -2,9 +2,7 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">
-        nuxt1
-      </h1>
+      <el-button>nuxt</el-button>
     </div>
   </div>
 </template>
