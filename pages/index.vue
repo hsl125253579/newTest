@@ -2,7 +2,6 @@
   <div class="container">
     <div>
       <logo />
-      <el-button>nuxt</el-button>
     </div>
   </div>
 </template>
@@ -19,7 +18,7 @@ export default {
 
 <style>
 .container {
-  margin: 0 auto;
+  margin: 0px auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;

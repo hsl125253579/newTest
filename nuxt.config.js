@@ -47,7 +47,7 @@ module.exports = {
   */
   build: {
     transpile: [/^element-ui/],
-    extractCSS: { allChunks: true },
+    extractCSS:process.env.NODE_ENV!=='development',
     babel: {
       plugins: [
         ["component", {
@@ -60,6 +60,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      console.log(config.module.rules)
       
     }
   }
