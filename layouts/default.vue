@@ -5,13 +5,13 @@
   </div>
 </template>
 <script>
-import IndexTop from "../components/IndexTop"
+import IndexTop from "../components/IndexTop";
 export default {
-  name:"default",
-  components:{
+  name: "Default",
+  components: {
     IndexTop
   }
-}
+};
 </script>
 <style lang="scss">
 @import "../assets/_init.scss";

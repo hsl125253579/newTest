@@ -1,10 +1,10 @@
 <template>
   <div id="page-top">
     <div class="lang-selector">
-      <el-dropdown @command="selectLang" trigger="click">
+      <el-dropdown trigger="click" @command="selectLang">
         <div class="dropdown-title">
-          <span v-text="langText[lang]"></span>
-          <i class="el-icon-arrow-down el-icon--right"></i>
+          <span v-text="langText[lang]" />
+          <i class="el-icon-arrow-down el-icon--right" />
         </div>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item v-for="(it,key) in langText" :key="key" :command="key">
@@ -26,7 +26,7 @@
 <script>
 import { mapState, mapMutations } from "vuex";
 export default {
-  name: "indexTop",
+  name: "IndexTop",
   data() {
     return {
       //   lang: "zh",
@@ -40,14 +40,14 @@ export default {
   computed: {
     ...mapState(["lang"])
   },
+  mounted() {
+    // console.log(this.$store);
+  },
   methods: {
     ...mapMutations(["changeLang"]),
     selectLang(lang) {
       this.changeLang(lang);
     }
-  },
-  mounted() {
-    console.log(this.$store);
   }
 };
 </script>
@@ -77,7 +77,7 @@ export default {
       padding: 0 20px;
       position: relative;
       &:after {
-        content:"";
+        content: "";
         width: 1px;
         height: 14px;
         position: absolute;
@@ -85,8 +85,13 @@ export default {
         top: 8px;
         background: #fff;
       }
-      &:last-child:after{display: none}
-      .login{margin-right:20px;cursor: pointer;}
+      &:last-child:after {
+        display: none;
+      }
+      .login {
+        margin-right: 20px;
+        cursor: pointer;
+      }
     }
   }
 }

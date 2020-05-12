@@ -1,15 +1,15 @@
 <template>
-    <div>
-        login
-    </div>
+  <div>login</div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+  name: "Login"
+};
 </script>
 
 <style lang="scss" scoped>
-    div{color:blue}
+div {
+  color: blue;
+}
 </style>

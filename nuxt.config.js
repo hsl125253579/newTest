@@ -36,18 +36,26 @@ module.exports = {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@nuxtjs/eslint-module'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios'
   ],
+  /*
+  ** Axios module configuration
+  ** See https://axios.nuxtjs.org/options
+  */
+  axios: {
+  },
   /*
   ** Build configuration
   */
   build: {
     transpile: [/^element-ui/],
-    extractCSS:process.env.NODE_ENV!=='development',
+    extractCSS: process.env.NODE_ENV !== 'development',
     babel: {
       plugins: [
         ["component", {
@@ -60,8 +68,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      console.log(config.module.rules)
-      
+
     }
   }
 }

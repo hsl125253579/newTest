@@ -1,9 +1,9 @@
 export const state = () => ({
-    lang: "zh"
+  lang: "zh"
 });
 export const mutations = {
-    changeLang(state,lang){
-        console.log(lang)
-        state.lang=lang
-    }
-}
+  changeLang(state, lang) {
+    // console.log(lang);
+    state.lang = lang;
+  }
+};
